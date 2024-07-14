@@ -13,25 +13,6 @@ This document outlines the REST API for a task management system built with Node
 
 The API uses basic HTTP authentication for user authorization.  To use the API, you first need to obtain a JWT token by authenticating with your username and password.
 
-**Authentication Endpoint:**
-
-- **Method:** `POST`
-- **URL:** `/auth`
-- **Request Body:**
-    - `userName`: (String)
-    - `password`: (String)
-
-**Successful Response:**
-- **Status code:** 200 OK
-- **Content-Type:** application/json
-- **Response Body:**
-    - `token`: (String) - JWT token for future requests
-
-**Failed Response:**
-- **Status code:** 401 Unauthorized
-- **Content-Type:** application/json
-- **Response Body:**
-    - `error`: (String) - Error message (e.g., "Invalid credentials")
 
 ## Endpoints
 
@@ -40,7 +21,7 @@ The API uses basic HTTP authentication for user authorization.  To use the API, 
 **1. Sign Up:**
 
 - **Method:** `POST`
-- **URL:** `/users/signUp`
+- **URL:** `/user/signUp`
 - **Request Body:**
     - `userName`: (String)
     - `password`: (String)
@@ -61,7 +42,7 @@ The API uses basic HTTP authentication for user authorization.  To use the API, 
 **2. Sign In:**
 
 - **Method:** `POST`
-- **URL:** `/users/signIn`
+- **URL:** `/user/signIn`
 - **Request Body:**
     - `userName`: (String)
     - `password`: (String)
