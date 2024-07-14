@@ -153,7 +153,7 @@ The API uses basic HTTP authentication for user authorization. To use the API, y
 - **Query Parameters:** 
     - `page`: (Number, optional) - Page number for pagination (default: 1).
     - `limit`: (Number, optional) - Number of tasks per page (default: 10).
-    - `shared`: (Boolean, optional) - Filter by shared status (true for public tasks).
+    - `taskScope`: (Enum, optional) - Filter by shared status (private or public).
     - `category`: (ObjectId, optional) - Filter by category ID.
     - `assignedTo`: (ObjectId, optional) - Filter by assigned user ID.
     - `completed`: (Boolean, optional) - Filter by completion status.
