@@ -11,7 +11,7 @@ This document outlines the REST API for a task management system built with Node
 
 ## User Authentication
 
-The API uses basic HTTP authentication for user authorization.  To use the API, you first need to obtain a JWT token by authenticating with your username and password.
+The API uses basic HTTP authentication for user authorization. To use the API, you first need to obtain a JWT token by authenticating with your username and password.
 
 
 ## Endpoints
@@ -150,6 +150,13 @@ The API uses basic HTTP authentication for user authorization.  To use the API, 
 - **Method:** `GET`
 - **URL:** `/task/getAllTasks`
 - **Authentication:** Required
+- **Query Parameters:** 
+    - `page`: (Number, optional) - Page number for pagination (default: 1).
+    - `limit`: (Number, optional) - Number of tasks per page (default: 10).
+    - `shared`: (Boolean, optional) - Filter by shared status (true for public tasks).
+    - `category`: (ObjectId, optional) - Filter by category ID.
+    - `assignedTo`: (ObjectId, optional) - Filter by assigned user ID.
+    - `completed`: (Boolean, optional) - Filter by completion status.
 - **Response Body:**
     - An array of task objects:
         - `id`: (String)
@@ -162,7 +169,6 @@ The API uses basic HTTP authentication for user authorization.  To use the API, 
         - `taskScope`: (String)
         - `task`: (Array of String)
         - `taskType`: (String)
-
 **3. Get Task By ID:**
 
 - **Method:** `GET`
@@ -196,4 +202,4 @@ The API uses basic HTTP authentication for user authorization.  To use the API, 
 
 You can use the Postman collection to interact with the API. [Here is the Postman link](https://documenter.getpostman.com/view/34440263/2sA3e5f94T) 
 
-This API allows users to manage their tasks effectively, organizing them into categories and controlling their visibility. It provides CRUD operations for both categories and tasks, ensuring flexible and comprehensive task management. 
+This API allows users to manage their tasks effectively, organizing them into categories and controlling their visibility. It provides CRUD operations for both categories and tasks, ensuring flexible and comprehensive task management. The API also supports features like **pagination** and **filtering** to enhance task management and retrieval. 
