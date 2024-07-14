@@ -1,4 +1,4 @@
-# Task Management API
+# Simple Task Manager API
 
 This document outlines the REST API for a task management system built with Node.js and MongoDB. It enables users to create, manage, and share tasks organized into categories.
 
