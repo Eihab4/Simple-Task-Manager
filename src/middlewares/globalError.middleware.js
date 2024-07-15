@@ -1,5 +1,4 @@
 export const globalError = (err, req, res, next) => {
-    console.error(err.stack); // Log the stack trace for debugging
 
     let statusCode = err.statusCode || 500; // Default to 500 if no specific status code is provided
     if (statusCode < 100 || statusCode > 599) {
